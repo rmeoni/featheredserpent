@@ -1,0 +1,22 @@
+<div class="country-new">
+	<div class="container">
+		<div class="app-nav">
+			<%= link_to "/countries" do %>
+				<i class="material-icons">chevron_left</i>
+			<% end %>
+		</div>
+		<h1> New Country </h1>
+		<%= form_for(@country) do |t| %>
+		<label for="image">Image</label>
+		<%= t.file_field :image, :placeholder => "image" %>
+		<p class="help-block">Max image size: 3 megabytes</p>
+		 <label for="title">Title</label>
+		<%= t.text_field :title, :placeholder => "Title" %>
+		<div class="submit">
+			<%= t.submit "Create Country", class: "btn-submit", method: "create" %>
+			<% end %> 
+		</div>
+	</div>
+</div>
+<div class="clear-fix">
+</div>

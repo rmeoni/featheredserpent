@@ -1,0 +1,25 @@
+// Place all the styles related to the tips controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#bs-over .tips .row #tip {
+	background-color: #fff;
+	padding: 40px;
+	margin: 5px;
+	border-left: 3px solid #DD4954;
+	width: 41.6667%
+}
+
+.tip-action li a {
+	text-decoration: none;
+}
+
+.tip-action i {
+	cursor: pointer;
+	color: #000;
+	opacity: 0.7;
+	transition: color .3s;
+}
+.tip-action i:hover {
+	color: #77D5F7;
+}

@@ -1,0 +1,28 @@
+<div class ="tag">
+	<div class="container">
+		<div class="app-nav">
+				<%= link_to "/tags" do %>
+				<i class="material-icons">chevron_left</i>
+				<% end %>
+			</div>
+		<div class="edit-form">
+			<img src="<%= @tag.image %>" width = "470px">
+			<%= form_for(@tag) do |f| %>
+			<div class ="form-group">
+				<label for="image">Image Url</label>
+				<%= f.text_field :image %>
+				<label for ="tag"> Title </label>
+				<%= f.text_field :title %>
+				<label for="tag"> Country ID </label>
+				<%= f.text_field :country_id %>
+				<div class="submit">
+				<%= f.submit "Update", :class => "btn-submit" %>
+				<% end %> 
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<div class="clear-fix">
+</div>

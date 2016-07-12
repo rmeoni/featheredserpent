@@ -1,0 +1,64 @@
+<div class="destinations">
+	<div class="page-nav">
+		<div class="dropdown">
+ 			<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   				<i class="material-icons" id="filter">filter_list</i>
+    			<span class="caret"></span>
+  			</button>
+  			<ul class="dropdown-menu" id="filter-menu" aria-labelledby="dLabel">
+    			<li><i class="material-icons">sort_by_alpha</i>Name</li>
+				<li><i class="material-icons">favorite</i>Most Visited</li>
+				<li><i class="material-icons">whatshot</i>Hottest</li>
+				<li><i class="material-icons">trending_up</i>Trending</li>
+				<li><i class="material-icons">my_location</i>Near Me</li>
+  			</ul>
+		</div>
+		<h2> Destinations </h2>
+		<ul class="pull-right">
+			<li class="square"><i class="material-icons" id="square">reorder</i></li>
+			<li class="squares"><i class="material-icons">apps</i></li>
+		</ul>
+	</div>
+	<div class="container">
+		<div class="app-nav">
+			<% if current_user && current_user.admin? || current_user.editor?() %>
+				<%= link_to create_destination_path(@new) do %>
+					<i class="material-icons">add_circle</i>
+				<% end %>
+			<% end %>
+		</div>
+		<div class="cards row">
+			<% @destination.each do |t| %>				
+			<div class="card col-md-3 col-xs-11">
+				<img class="img-responsive" id="tags" src="<%= t.image %>"/>
+				<h2><%= t.name %></h2>
+				<p><%= t.description %></p>
+				<%= link_to destination_path(t) do %>
+				<div class="card-action">
+					<i class="material-icons">remove_red_eye</i>
+				<% end %>
+				<i class="material-icons">favorite_border</i>
+				<%= link_to tag_path(t) do %>
+					<i class="material-icons">location_on</i>
+				<% end %>
+				<%= link_to tag_path(t) do %>
+					<i class="material-icons">loyalty</i>
+				<% end %>
+				<% if current_user && current_user.admin?() %>
+					<%= link_to destination_path(t), method: "delete", data: {confirm: "Are you sure you want to delete this?"} do %>
+					<i class="material-icons">delete_forever</i>
+					<% end %>
+				<% end %>	
+				<% if current_user && current_user.admin? || current_user.editor?() %>
+					<%= link_to edit_destination_path(t) do %>
+					<i class="material-icons">mode_edit</i>
+					<% end %>
+				<% end %>
+				</div>		
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+<div class="clear-fix">
+</div>

@@ -1,0 +1,11 @@
+<div class="tip">
+	<div class="container">
+		<h2> New Tip </h2>
+		<%= form_for(@tip) do |t| %>
+		<%= t.text_area :content %>
+		<%= t.submit "Create", :class => "btn" %>
+		<% end %>
+	</div>
+</div>
+<div class="clear-fix">
+</div>

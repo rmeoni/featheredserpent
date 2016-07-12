@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Feathered Serpent App</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!-- google fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+   	<!--font awesome-->
+  <script src="https://use.fontawesome.com/811422e9bc.js"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+</head>
+<body id="bs-over" class="body">
+	<div class="menu">
+		<div class="icon-close">
+			<i class="material-icons">close</i>
+		</div>
+		<ul>
+			<li><a href="/"><i class="material-icons">home</i>Home</a></li>
+			<li><a href="/countries"><i class="material-icons">public</i>Countries</a></li>
+			<li><a href="/destinations"><i class="material-icons">filter_hdr</i>Destinations</a></li>
+			<li><a href="/"><i class="material-icons">business</i>Business</a></li>
+			<li><a href="/destinations"><i class="material-icons">directions_bus</i>Shuttle</a></li>
+		</ul>
+
+		<ul>
+			<li><i class="material-icons">whatshot</i>Hot</li>
+			<li><i class="material-icons">trending_up</i>Trending</li>
+			<li><i class="material-icons">swap_vertical_circle</i>Vote</li>
+		</ul>
+
+		<% if current_user %>
+			<ul>
+				<li><i class="material-icons">person_outline</i><%= current_user.email %></li>
+				<li><%= link_to logout_path, method: "delete" do %>
+					<p><i class="material-icons">exit_to_app</i> Logout </p>
+				<% end %>
+				</li>
+			</ul>
+		<% end %>
+
+		<% if current_user && current_user.super?() %>
+			<ul>
+				<li><%= link_to "/users" do %>
+					<i class="material-icons">settings</i> Users
+					<% end %>
+				</li>
+			</ul>
+		<% end %>
+	</div>
+		<div class="mobile-nav">
+			<% if current_user %>
+			<ul class="pull-right">
+				<li><%= current_user.first_name.capitalize %> <%= current_user.last_name.capitalize %></li>
+				<li><i class="material-icons" id="account">account_circle</i></li>
+			</ul>
+			<% else %>
+			<div clas="clear">
+			</div>
+			<% end %>
+			<div class="icon-menu">
+				<i class="material-icons" id="icon-menu">menu</i>
+			</div>
+			<form class="navbar-form" role="search">
+			 	<div class="form-group">
+    				<input type="text" class="form-control" placeholder="Search">
+  				</div>
+			</form>
+			<% if current_user %>
+			<ul class="dropdown-menu pull-right" id="account-menu">
+					<li><%= link_to profile_path(current_user) do %>
+						<i class="material-icons" id="account">account_circle</i>Profile
+						<% end %>
+					</li>
+					<li><%= link_to logout_path, method: "delete" do %>
+					<i class="material-icons">exit_to_app</i> Logout 
+				<% end %>
+			</ul> 
+			<% end %>
+		</div>
+
+	<div class="header">
+		<div class="container">
+			<ul>
+				<li><%= link_to root_path do%>
+					<img id="logo" src="/images/logo/tfs-n.png" width="95px"/> 
+					<% end %>
+				</li>
+				<li><h3> Feathered Serpent </h3></li>
+
+				<% if current_user %>
+					<ul class="nav pull-right">
+			<li><a href="/countries"><i class="material-icons">public</i></a></li>
+			<li><a href="/destinations"><i class="material-icons">filter_hdr</i></a></li>
+			<li><a href="/"><i class="material-icons">business</i></a></li>
+			<li><a href="/destinations"><i class="material-icons">directions_bus</i></a></li>
+					</ul>
+
+				<% end %>
+
+				<% unless current_user %>
+					<ul class="nav pull-right">
+						<li><%= link_to "Login", "login" %></li>
+						<li><%= link_to "Signup", "signup" %></li>
+					</ul>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+
+	<div class="clear-fix">
+	</div>
+
+<%= yield %>
+
+	<div class="pre-footer">
+		<ul>
+			<li><i class="fa fa-facebook fa-2x" id="fb" aria-hidden="true"></i>
+</li>
+			<li><i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+</li>
+			<li><i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+</li>
+		</ul>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+		</div>
+	</div>
+
+  	<!-- Latest compiled and minified JavaScript for bootstrap -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  	<!-- mobile nav bar -->
+	<script type="text/javascript">
+	
+	var main = function() {
+
+	
+    $('.dropdown-toggle').dropdown();	
+
+	/* Push the body and the nav over by 480px over */
+  $('#icon-menu').click(function() {
+    $('.menu').animate({
+      left: "0px"
+    }, 200);
+
+    $('body').animate({
+      left: "300px"
+    }, 200);
+  });
+
+  /* Then push them back */
+  $('.icon-close').click(function() {
+    $('.menu').animate({
+      left: "-300px"
+    }, 200);
+
+    $('body').animate({
+      left: "0px"
+    }, 200);
+
+});
+
+
+    $('.square').click(function(){
+    	$('.card').removeClass('col-md-3');
+    	$('.card').fadeIn('slow');
+    	$('.card').addClass('col-md-7');
+    });
+
+    $('.squares').click(function(){
+    	$('.card').removeClass('col-md-7');
+    	$('.card').fadeIn('slow');
+    	$('.card').addClass('col-md-3');
+    });
+
+    $('#account').click(function(){
+    	$('#account-menu').toggle();
+    });
+
+
+};
+$(document).ready(main);
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+// Place all the styles related to the Tags controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#bs-over .container {
+	margin: 0px 0px 0px 50px;
+	padding: 0px;
+	right: 0px;
+	left:0px;
+
+}
+
+
+#bs-over .col-md-3 img {
+	height:220px;
+	min-width: 380px;
+	min-height:220px;
+	margin-top: 25px;
+}
+
+
+#bs-over .card {
+	margin: 0px 20px 20px 0px;
+	min-width: 380px;
+	padding: 0px 0px 0px 0px;
+	background-color: #fff;
+	border: 0px solid #fff;
+	border-radius: 0%;
+	box-shadow: 0px 1px 2px #9E9E9E;
+	text-align: center;
+}
+
+#bs-over .tag .card {
+	min-height: 400px;
+}
+
+#bs-over .cards {
+	margin-top: 40px;
+}
+
+#bs-over h1 {
+	margin: 20px 40px 20px 0px;
+}
+
+#bs-over .card i {
+	color: #000;
+	opacity: 0.7;
+	float: right;
+	transition: color .3s;
+	padding-bottom: 10px;
+}
+
+#bs-over .card i:hover {
+	color: #77D5F7 ;
+}
+
+#bs-over .card p{
+	height:50px;
+}
+
+#bs-over .card-action {
+	padding: 10px;
+	margin: 10px;
+}
+
+#bs-over .btn-create {
+	background-color: #fff;
+	box-shadow: none;
+	border: 2px solid #77D5F7;
+	color: #77D5F7;
+	transition: background-color .3s;
+	transition: color .3s;
+}
+
+
+
+#bs-over .tag-new form input {
+	margin: 0px;
+	margin-bottom: 10px;
+
+}

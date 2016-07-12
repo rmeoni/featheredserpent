@@ -1,0 +1,65 @@
+<div class="tag">
+	<div class="page-nav">
+		<div class="dropdown">
+ 			<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   				<i class="material-icons" id="filter">filter_list</i>
+    			<span class="caret"></span>
+  			</button>
+  			<ul class="dropdown-menu" id="filter-menu" aria-labelledby="dLabel">
+    			<li><i class="material-icons">sort_by_alpha</i>Name</li>
+				<li><i class="material-icons">favorite</i>Most Visited</li>
+				<li><i class="material-icons">whatshot</i>Hottest</li>
+				<li><i class="material-icons">trending_up</i>Trending</li>
+				<li><i class="material-icons">my_location</i>Near Me</li>
+  			</ul>
+		</div>
+		<h2><%= @tag.title %></h2>
+		<ul class="pull-right">
+			<li class="square"><i class="material-icons" id="square">reorder</i></li>
+			<li class="squares"><i class="material-icons">apps</i></li>
+		</ul>
+	</div>
+ 	<div class="container">
+ 		<div class="app-nav">
+			<%= link_to @tag.country do %>
+				<i class="material-icons">chevron_left</i>
+			<% end %>
+		</div>
+ 		<div class="col-md-4 col-xs-4 col-md-offset-8 col-xs-offset-3">
+			<% flash.each do |name, msg| -%>
+    			<%= content_tag :div, msg, class: name %>
+    		<% end %>
+		</div>
+   		<div class="app-nav">
+   			<% if current_user.admin? || current_user.editor?() %>
+   				<%= link_to new_destination_path do %>
+   					<i class="material-icons">add_circle</i>
+				<% end %>
+			<% end %>
+		</div>
+
+   		<div class = "cards row">
+			<% @destinations.each do |d| %>
+    		<div class= "card col-md-3 col-xs-11">
+				<img class="img-responsive" id="tags" src="<%= d.image %>">
+				<h2><%= d.name %></h2>
+				<p><%= d.description %> </p>
+				<div class="card-action">
+				<%= link_to destination_path(d) do %>
+					<i class="material-icons">remove_red_eye</i>
+				<% end %>
+				<i class="material-icons">favorite_border</i>
+				<%= link_to destination_path(d) do %>
+					<i class="material-icons">location_on</i>
+				<% end %>
+				<%= link_to destination_path(d) do %>
+					<i class="material-icons">loyalty</i>
+				<% end %>	
+    			</div>
+    		</div>
+			<% end %>
+   		</div>		
+	</div>
+</div>
+<div class="clear-fix">
+</div>

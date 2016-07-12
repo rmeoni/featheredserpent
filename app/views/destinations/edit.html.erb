@@ -1,0 +1,28 @@
+<div class="destination">
+	<div class="container">
+		<div class="app-nav">
+				<%= link_to destination_path do %>
+				<i class="material-icons">chevron_left</i>
+				<% end %>
+			</div>
+		<div class="edit-form">
+			<img class="img-responsive" src="<%= @destination.image %>"/>
+			<%= form_for(@destination) do |f| %>
+				<label for="image"> Image Url </edit>
+				<%= f.text_field :image %>
+				<label for="destination"> Destination Name </label>
+				<%= f.text_field :name %>
+				<label for="tag-id"> Tag ID </label>
+				<%= f.text_field :tag_id %>
+				<label for="destination"> Destination Description</label>
+				<%= f.text_area :description %>
+				<div class="submit">
+				<%= f.submit "Update", :class => "btn-submit", :id => "btn" %>
+			<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear-fix">
+	</div>
+

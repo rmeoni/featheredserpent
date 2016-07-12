@@ -1,0 +1,65 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#bs-over .jumbotron {
+	color:#000;
+	height: 600px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	posiition: relative;
+}
+.signup-form {
+	color:#000;
+}
+
+#bs-over input {
+	background-color: #fff;
+	margin: 15px;
+	margin-left: 0px;
+	padding:10px;
+	display: block;
+	border: 0px;
+	border-bottom: 3px solid #000; 
+	transition: border-bottom 0.5s;
+}
+
+#bs-over input:focus, input:hover {
+	border-bottom: 3px solid #DD4954;
+}
+
+
+#bs-over .submit input {
+	background-color: #000;
+	color:#fff;
+	border: 2px solid #000;
+}
+
+#bs-over .submit input:hover {
+	cursor: pointer;
+	background-color: #DD4954;
+	color:#fff;
+	border: 2px solid #DD4954;
+	transition: color .5s;
+}
+
+.user-info {
+	margin: 40px 0px 40px 0px; 
+	text-align: center;
+}
+
+.user-info ul {
+	list-style-type: none;
+	margin-left: 0px;
+	padding-left: 0px;
+	display: inline-block;
+}
+
+.user-info li {
+	padding-left: 10px;
+}
+
+.users .col-md-3 {
+	border: 3px solid #77D5F7 ;
+	margin: 10px;
+	background-color: #fff;
+}

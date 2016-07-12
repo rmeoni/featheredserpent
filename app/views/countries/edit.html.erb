@@ -1,0 +1,23 @@
+<div class="country">
+	<div class="container">
+		<div class="edit-form">
+			<div class="app-nav">
+				<%= link_to country_index_path do %>
+				<i class="material-icons">chevron_left</i>
+				<% end %>
+			</div>
+			<img class="img-responsive" src="<%= @country.image %>"/>
+			<%= form_for(@country) do |f| %>
+			<div class="form-group">
+				<label for="image"> Image Url </edit>
+				<%= f.text_field :image %>
+				<label for="country"> Country Name </label>
+				<%= f.text_field :title %>
+				<div class="submit">
+				<%= f.submit "Update", :class => "btn-submit", :id => "btn" %>
+				<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

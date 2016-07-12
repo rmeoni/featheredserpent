@@ -1,0 +1,272 @@
+
+---
+destinations:
+  columns:
+  - id
+  - name
+  - image
+  - description
+  - tag_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Yaxha National Park
+    - "/images/yaxha/yaxha.jpg"
+    - I will put a really cool description later! I promise I'm not procastinating!
+      I already did a lot of cool stuff with the app.
+    - 1
+    - '2016-06-12 19:05:25.820410'
+    - '2016-06-17 18:37:38.088497'
+  - - 2
+    - El Paredon
+    - "/images/paredon/paredon.jpg"
+    - Awesome place to get shitfaced!
+    - 2
+    - '2016-06-12 19:05:25.825496'
+    - '2016-06-20 04:14:06.065176'
+  - - 3
+    - Centro Historico
+    - "/images/ciudad/ciudad.jpg"
+    - Same, but different, but still same
+    - 3
+    - '2016-06-12 19:05:25.829052'
+    - '2016-06-12 19:05:25.829052'
+  - - 19
+    - Tikal National Park
+    - "/images/tikal/templo4.jpg"
+    - 'I will put a really cool description later! I promise I''m not procastinating!
+      I already did a lot of cool stuff with the app. '
+    - 1
+    - '2016-06-18 21:55:00.472654'
+    - '2016-06-19 06:31:50.560226'
+  - - 22
+    - Aguateca
+    - "/images/aguateca/rio-pasion.jpg"
+    - 'I will put a really cool description later! I promise I''m not procastinating!
+      I already did a lot of cool stuff with the app. '
+    - 1
+    - '2016-06-19 03:20:18.296001'
+    - '2016-06-19 06:32:04.422447'
+  - - 26
+    - El Remate
+    - "/images/remate/sunset.jpg"
+    - Best place in Petén to swim and eat amazing pizza!
+    - 1
+    - '2016-06-19 04:40:34.111511'
+    - '2016-06-19 04:42:52.866245'
+  - - 28
+    - Volcan de Chikabal
+    - "/images/chikabal/chikabal.jpg"
+    - I will put a really cool description later! I promise I'm not procastinating!
+      I already did a lot of cool stuff with the app.
+    - 24
+    - '2016-06-19 06:42:52.314149'
+    - '2016-06-19 06:44:37.408235'
+  - - 39
+    - Isla de Flores
+    - "/images/flores/isla.jpg"
+    - I will put a really cool description later! I promise I´m not procastinating!
+    - 1
+    - '2016-06-21 16:21:42.838051'
+    - '2016-06-21 16:22:12.353576'
+
+---
+users:
+  columns:
+  - id
+  - first_name
+  - last_name
+  - email
+  - password_digest
+  - role
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - rodrigo
+    - meoño
+    - rodrigo.me13@hotmail.com
+    - "$2a$10$y49XU7F9vir45p7agB6YXOu2GEUK42ce5uPz6bIvYkIuNZ7kjJfrG"
+    - editor
+    - '2016-06-20 03:23:30.981594'
+    - '2016-06-20 03:23:30.981594'
+  - - 2
+    - rodrigo
+    - meoño
+    - rodrigo@email.com
+    - "$2a$10$g8dzPciux.JP/ng3knjMheqPzGgKD.YoCSZJZZsI2HRLBF.L9jqCa"
+    - admin
+    - '2016-06-20 03:23:31.047828'
+    - '2016-06-20 03:23:31.047828'
+  - - 3
+    - rodrigo
+    - meoño
+    - rodrigo.me13@gmail.com
+    - "$2a$10$i89YtfKyLSMu6kwK2akneuuFhdlDlPjCbhKkz7xZ6qGBpDF9jUpiy"
+    - super
+    - '2016-06-20 03:27:53.720537'
+    - '2016-06-26 04:52:47.455921'
+
+---
+countries:
+  columns:
+  - id
+  - title
+  - image
+  - created_at
+  - updated_at
+  records: 
+  - - 9
+    - Costa Rica
+    - "/images/art/fs-cover3.jpg"
+    - '2016-06-22 02:48:20.796133'
+    - '2016-06-22 17:37:23.478505'
+  - - 10
+    - Nicaragua
+    - "/images/art/fs-cover4.jpg"
+    - '2016-06-22 02:52:51.275672'
+    - '2016-06-22 17:37:40.625751'
+  - - 29
+    - Guatemala
+    - "/images/art/fs-cover.jpg"
+    - '2016-06-23 18:07:06.887370'
+    - '2016-06-23 18:07:06.887370'
+  - - 33
+    - El Salvador
+    - "/images/art/fs-cover2.jpg"
+    - '2016-06-23 18:24:19.975419'
+    - '2016-06-24 05:58:33.388799'
+  - - 34
+    - Panama
+    - "/images/art/sunset.jpg"
+    - '2016-06-23 18:29:38.177224'
+    - '2016-06-24 05:59:00.045369'
+  - - 35
+    - Honduras
+    - "/images/ciudad/ciudad-aerea.jpg"
+    - '2016-06-24 06:00:22.029886'
+    - '2016-06-24 06:01:30.987929'
+
+---
+tags:
+  columns:
+  - id
+  - title
+  - image
+  - created_at
+  - updated_at
+  - country_id
+  records: 
+  - - 1
+    - Petén
+    - "/images/yaxha/yaxha.jpg"
+    - '2016-06-12 19:05:25.810684'
+    - '2016-06-23 18:09:23.971397'
+    - 29
+  - - 2
+    - Escuintla
+    - "/images/paredon/paredon.jpg"
+    - '2016-06-12 19:05:25.823169'
+    - '2016-06-23 18:09:30.305401'
+    - 29
+  - - 3
+    - Ciudad
+    - "/images/ciudad/ciudad.jpg"
+    - '2016-06-12 19:05:25.827323'
+    - '2016-06-23 18:09:38.319897'
+    - 29
+  - - 23
+    - Chichicastenango
+    - "/images/chichi/chichi-art.jpg"
+    - '2016-06-18 21:13:52.775498'
+    - '2016-06-23 18:09:45.389353'
+    - 29
+  - - 24
+    - Quetzaltenango
+    - "/images/quetzaltenango/xela.jpg"
+    - '2016-06-18 21:16:23.135335'
+    - '2016-06-23 18:09:52.172470'
+    - 29
+  - - 29
+    - Izabal
+    - "/images/izabal/rio-dulce.jpg"
+    - '2016-06-20 03:57:52.766932'
+    - '2016-06-23 18:10:05.592908'
+    - 29
+  - - 30
+    - San Marcos
+    - "/images/san-marcos/tajumulco.jpg"
+    - '2016-06-20 03:58:34.786807'
+    - '2016-06-23 18:10:11.056171'
+    - 29
+
+---
+messages:
+  columns:
+  - id
+  - content
+  - user_id
+  - destination_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Bring sunscreen!
+    - 3
+    - 
+    - '2016-06-28 22:25:10.022385'
+    - '2016-06-28 22:25:10.022385'
+  - - 2
+    - Come in by shuttle! It's way faster than public transportation.
+    - 3
+    - 
+    - '2016-06-28 22:31:41.239346'
+    - '2016-06-28 22:31:41.239346'
+  - - 3
+    - This shouldn't be working...
+    - 3
+    - 
+    - '2016-06-29 04:58:19.314131'
+    - '2016-06-29 04:58:19.314131'
+  - - 4
+    - I hope this works..
+    - 3
+    - 
+    - '2016-06-29 20:00:38.869433'
+    - '2016-06-29 20:00:38.869433'
+
+---
+tips:
+  columns:
+  - id
+  - content
+  - user_id
+  - destination_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 
+    - 
+    - 
+    - '2016-06-30 02:04:46.545517'
+    - '2016-06-30 02:04:46.545517'
+  - - 2
+    - OK now this should work..
+    - 
+    - 
+    - '2016-06-30 18:00:47.236403'
+    - '2016-06-30 18:00:47.236403'
+  - - 3
+    - This should work even better!
+    - 3
+    - 
+    - '2016-06-30 18:02:12.893399'
+    - '2016-06-30 18:02:12.893399'
+  - - 4
+    - It is semi-working now! jaja
+    - 3
+    - 
+    - '2016-06-30 18:42:15.305779'
+    - '2016-06-30 18:42:15.305779'

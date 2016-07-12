@@ -1,0 +1,27 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.login-form {
+	background-image: url("/images/art/waves.jpg");
+	height: 400px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding:20px;
+}
+
+.login-form input {
+	background-color: #fff;
+	margin: 15px;
+	padding:10px;
+	display: block;
+	border: 0px;
+	border-bottom: 3px solid #000; 
+	transition: border-bottom 0.5s;
+}
+
+
+
+

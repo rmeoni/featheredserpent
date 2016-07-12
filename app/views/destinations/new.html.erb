@@ -1,0 +1,38 @@
+<div class="new-destination">
+	<div class="container">
+		<div class="col-md-4 col-xs-4 col-md-offset-8 col-xs-offset-3">
+			<% flash.each do |name, msg| -%>
+    		<%= content_tag :div, msg, class: name %>
+    		<% end -%>
+		</div>
+
+		<div class="app-nav">
+			<%= link_to :back do %>
+				<i class="material-icons">chevron_left</i>
+			<% end %>
+		</div>
+
+		<h1> New Destination </h1>
+		<%= form_for(@destination) do |f|%>
+		<div class="form-group">
+			<label for="name"> Destination Name </label>
+			<%= f.text_field :name %>
+		</div>
+		<div class="form-group">
+			<label for="image"> Destination Image </label>
+			<%= f.file_field :image %>
+		</div>
+		<div class="form-group">
+			<label for="description"> Destination Description </label>
+			<%= f.text_field :description %>
+			<label for="tag-id"> Tag ID </label>
+			<%= f.text_field :tag_id %>
+			<div class="submit">
+			<%= f.submit "Create Destination", class: "btn-submit", method: "create" %>
+			</div>
+		</div>
+		<% end %>
+	</div>
+</div>
+<div class="clear-fix">
+</div>

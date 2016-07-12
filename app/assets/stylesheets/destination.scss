@@ -1,0 +1,114 @@
+// Place all the styles related to the Destination controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.destinations {
+
+}
+
+.dropdown {
+	display: inline;
+};
+
+.destination {
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+.destination .col-md-6 {
+	background-color: #fff;
+	min-width: 480px;
+	box-shadow: 0px 1px 2px #9E9E9E;
+	border-radius: 0%;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+
+.destination .col-md-6 img{
+	margin: 20px 0px 10px 0px;
+	padding: 10px 0px 10px 0px;
+}
+
+#bs-over .destination .col-md-5 {
+	background-color:#fff;
+	box-shadow: 0px 1px 2px #9E9E9E;
+	margin-left: 0px;	
+}
+
+.destinations .card {
+	min-height: 400px;
+}
+
+.destination i {
+	color: #77D5F7;
+	float: right;
+	padding: 5px;
+	margin-bottom: 10px;
+	transition: color .3s;
+}
+
+.destination i:hover {
+	color: #000;
+}
+
+.edit-form {
+	margin-top: 20px;
+}
+
+#bs-over .edit-form input {
+	margin: 10px 0px 10px 0px;
+	padding-left: none;
+}
+#bs-over  textarea {
+	width:300px;
+	height: 150px;
+	border: none;
+	border-bottom: 3px solid #000;
+	transition: border .5s;
+}
+
+#bs-over textarea:focus {
+	border-bottom: 3px solid #DD4954;
+	transition: border .5s;
+}
+
+#bs-over label {
+	display: block;
+	margin-top: 20px;
+}
+
+#bs-over .new-destination form input {
+	margin: 0px;
+	margin-bottom: 10px;
+
+}
+
+
+#bs-over .edit-form img {
+	max-width: 380px;
+
+}
+
+#bs-over .tip-form {
+	background-color: #fff;
+	height: 120px;
+	padding-top: 10px;
+}
+
+#bs-over .tip-form textarea {
+	width: 100%;
+	height: 70px;
+	border: 1px solid #DBDBDB;
+	color: #000;
+}
+
+#bs-over .tip-form textarea:focus {
+	border-bottom: 3px solid #DD4954;
+}
+
+#bs-over .tip-form .btn {
+	margin-right: 0px;
+	margin-top: 5px;
+	padding: 5px;
+	float: right;
+}
