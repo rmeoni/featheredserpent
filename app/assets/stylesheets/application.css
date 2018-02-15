@@ -146,13 +146,14 @@
 	color:#333;
 }
 
+/* Search Bar */
 #bs-over .mobile-nav form {
 	float:right;
 	margin: 0px 5px 0px 5px;
 	padding: 0px 0px 0px 5px;
 	position: relative;
 	top: -60px;
-	left: -22%;
+	left: -32%;
 	color:#000;
 }
 
@@ -489,19 +490,30 @@
 	background-color: #fff;
 }
 
+#bs-over .footer #sofi {
+	margin-top: 100px;
+	text-align: center;
+	list-style-type: none;
+}
+
 @media only screen and (max-width: 768px) {
 
-	.nav {
-		display: none;
+	#bs-over .header {
+		height: 200px;
+	}
+
+	#bs-over #logo {
+		width: 80px;
+	}
+
+	#bs-over .header h3 {
+		font-size: 1em;
 	}
 
 	#bs-over .col-md-7 {
 		margin-left: 0%;
 	}
 
-	#bs-over .header li h3 {
-		display: none;
-	}
 
 	#bs-over i {
 		margin-right: 0px;
