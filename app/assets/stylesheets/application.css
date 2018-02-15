@@ -257,7 +257,12 @@
 }
 
 #bs-over #signup {
-	float: right;
+  left: 5%;
+  text-align: left;
+}
+
+#bs-over #signup h1 {
+ text-align: left;
 }
 
 
