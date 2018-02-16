@@ -490,7 +490,7 @@
 }
 
 #bs-over .pre-footer i:hover {
-	color: #E7FF00;
+	color: #80D8FF;
 	border: 2px solid #E7FF00;
 }
 
@@ -546,11 +546,18 @@
 
 	#bs-over .col-md-3 img {
 		height: auto;
-		min-height: 220px;
-		min-width: 380px;
+		min-height: 100px;
+		min-width: 100px;
 	}
 
 	#bs-over .mobile-nav .form-control {
 		display: none;
 	}
+
+	#bs-over .card {
+	min-height: 100px;
+	min-width: 100px;
+	margin: 0px;
+	border: 0px;
+}
 }
