@@ -3,6 +3,7 @@
 <head>
 
   <title>The Best of Guatemala</title>
+   <link rel="icon" href="/images/logo/favicon.ico">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -69,12 +70,15 @@
 			<% end %>
 			<div class="icon-menu">
 				<i class="material-icons" id="icon-menu">menu</i>
+			<h3> <a href="/">The Best of Guatemala</a> </h3>	
 			</div>
+			<% if current_user %>
 			<form class="navbar-form" role="search">
 			 	<div class="form-group">
     				<input type="text" class="form-control" placeholder="Search">
   				</div>
 			</form>
+			<% end %>
 			<% if current_user %>
 			<ul class="dropdown-menu pull-right" id="account-menu">
 					<li><%= link_to profile_path(current_user) do %>
@@ -91,11 +95,6 @@
 	<div class="header">
 		<div class="container">
 			<ul>
-				<li><%= link_to root_path do%>
-					<img id="logo" src="/images/logo/tfs-n.png" width="95px"/> 
-					<% end %>
-				</li>
-				<li><h3> The Best of Guatemala </h3></li>
 
 				<% if current_user %>
 					<ul class="nav pull-right">
