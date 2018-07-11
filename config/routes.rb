@@ -11,11 +11,11 @@ Rails.application.routes.draw do
 
   get '/tags/:id/new' => 'destinations#new', as: :new_destination
 	post '/tags/:id/new' => 'destinations#create'
-  get '/destinations' => 'destinations#index'
-  get '/destinations/new' =>  'destinations#new', as: :create_destination
-  get '/destinations/:id' => 'destinations#show', as: :destination	
-	get '/destinations/:id/edit' => 'destinations#edit', as: :edit_destination
-	patch '/destinations/:id' => 'destinations#update'
+  get '/product' => 'destinations#index'
+  get '/product/new' =>  'destinations#new', as: :create_destination
+  get '/product/:id' => 'destinations#show', as: :destination	
+	get '/product/:id/edit' => 'destinations#edit', as: :edit_destination
+	patch '/product/:id' => 'destinations#update'
 
 	get 'signup' => 'users#new'
   get '/users' => 'users#index', as: :users
@@ -27,12 +27,12 @@ Rails.application.routes.draw do
 	post '/login' =>'sessions#create'	
 	delete 'logout' => 'sessions#destroy'
 
-  get '/countries' => 'countries#index', as: :country_index
-  get '/countries/new' => 'countries#new', as: :create_country
-  get '/countries/:id/edit' => 'countries#edit', as: :edit_country
-  get '/countries/:id/new' => 'tags#new', as: :tag_in_country
-  patch '/countries/:id' => 'countries#update'
-  get '/countries/:id' => 'countries#show', as: :country
+  get '/brands' => 'countries#index', as: :country_index
+  get '/brands/new' => 'countries#new', as: :create_country
+  get '/brands/:id/edit' => 'countries#edit', as: :edit_country
+  get '/brands/:id/new' => 'tags#new', as: :tag_in_country
+  patch '/brands/:id' => 'countries#update'
+  get '/brands/:id' => 'countries#show', as: :country
 
   get '/messages' => 'messages#index', as: :messages
   post '/messages' => 'messages#create'

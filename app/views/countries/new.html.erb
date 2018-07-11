@@ -1,11 +1,11 @@
 <div class="country-new">
 	<div class="container">
 		<div class="app-nav">
-			<%= link_to "/countries" do %>
+			<%= link_to "/brands" do %>
 				<i class="material-icons">chevron_left</i>
 			<% end %>
 		</div>
-		<h1> New Country </h1>
+		<h1> New Brand</h1>
 		<%= form_for(@country) do |t| %>
 		<label for="image">Image</label>
 		<%= t.file_field :image, :placeholder => "image" %>
